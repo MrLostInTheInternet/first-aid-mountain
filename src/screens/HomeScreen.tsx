@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import React, { useLayoutEffect, useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import tw from 'twrnc';
+import { RootStackParamList } from '../../types';
 import {
   AcademicCapIcon,
   Bars3Icon
@@ -9,18 +10,19 @@ import {
 import { SelectList } from 'react-native-dropdown-select-list'
 import SafeAndroidView from "../components/SafeAndroidView";
 import BodyPartsComponent from "../components/BodyPartsComponent"
+import { StackNavigationProp } from '@react-navigation/stack';
 
 
 const HomeScreen: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   const [selected, setSelected] = React.useState("");
   
   const data = [
-      {key:'1', value:'Puntura 1'},
-      {key:'2', value:'Puntura 2'},
-      {key:'3', value:'Puntura 3'},
+      {key:'1', value:'Bite Type 1'},
+      {key:'2', value:'Bite Type 2'},
+      {key:'3', value:'Bite Type 3'},
   ]
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -28,12 +30,9 @@ const HomeScreen: React.FC = () => {
     });
   }, [navigation]);
 
-  const handleDropdown = () => {
-    setIsOpen(!isOpen);
-  }
-
   const handleSelected = () => {
-    console.log(selected)
+    const biteType = selected
+    navigation.navigate("BiteInfo", { biteType })
     setIsOpen(!isOpen)
   }
 
@@ -47,21 +46,16 @@ const HomeScreen: React.FC = () => {
           <Text style={tw`font-bold text-gray-400 text-xs`}>Select body part</Text>
           <Text style={tw`font-bold text-xl text-pink-500`}>Trek Medic</Text>
         </View>
-        <TouchableOpacity>
-          {!isOpen && (<Bars3Icon size={40} color='black' onPress={() => handleDropdown()}/>)}
-        </TouchableOpacity>
       </View>
-      <View style={tw`left-60 absolute top-11 z-100`}>
-        {isOpen && (
-          <SelectList
-            setSelected={(val:string) => setSelected(val)}
-            onSelect={()=> handleSelected()}
-            placeholder='Select Puncture'
-            data={data} 
-            save="value"
-            search={false}
-          />
-        )}
+      <View style={tw`left-65 absolute top-11 z-100`}>
+        <SelectList
+          setSelected={(val:string) => setSelected(val)}
+          onSelect={()=> handleSelected()}
+          placeholder='Bite Type'
+          data={data} 
+          save="value"
+          search={false}
+        />
       </View>
       <View>
         <BodyPartsComponent />

@@ -1,4 +1,5 @@
 export type RootStackParamList = {
     Home: undefined;
-    BodyPartInfo: { bodyPartName: string}
+    BodyPartInfo: { bodyPartName: string }
+    BiteInfo: { biteType: string }
 }
