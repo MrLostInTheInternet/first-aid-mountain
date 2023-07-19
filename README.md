@@ -67,6 +67,7 @@ And scan the QR code with your phone Expo Go app. That's it. Enjoy it.
 </a>
 
 # ✍️ Authors <a name="authors"></a>
+- [MrLostInTheInternet](https://github.com/MrLostInTheInternet)
 <p align="center">
 <br>
 <a href="https://github.com/MrLostInTheInternet" target='_blank'>
