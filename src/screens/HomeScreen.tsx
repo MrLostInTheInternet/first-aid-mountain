@@ -37,17 +37,17 @@ const HomeScreen: React.FC = () => {
   }
 
   return (
-    <SafeAreaView style={SafeAndroidView.AndroidSafeArea}>
-      <View style={tw`flex-row pt-4 pb-3 items-center mx-4`}>
-        <TouchableOpacity activeOpacity={0.4} style={tw`bg-white`}>
+    <SafeAreaView>
+      <View style={tw`flex-row top-[10%] absolute pb-3 items-center mx-4`}>
+        <TouchableOpacity activeOpacity={0.4} >
           <AcademicCapIcon size={40} color="black"/>
         </TouchableOpacity>
-        <View style={tw`pr-50`}>
+        <View>
           <Text style={tw`font-bold text-gray-400 text-xs`}>Select body part</Text>
           <Text style={tw`font-bold text-xl text-pink-500`}>Trek Medic</Text>
         </View>
       </View>
-      <View style={tw`left-65 absolute top-11 z-100`}>
+      <View style={tw`left-[65%] absolute top-[10%] z-100`}>
         <SelectList
           setSelected={(val:string) => setSelected(val)}
           onSelect={()=> handleSelected()}
@@ -57,7 +57,7 @@ const HomeScreen: React.FC = () => {
           search={false}
         />
       </View>
-      <View>
+      <View style={tw`items-center justify-center top-[8%]`}>
         <BodyPartsComponent />
       </View>
     </SafeAreaView>
