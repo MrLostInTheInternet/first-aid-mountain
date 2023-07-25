@@ -44,7 +44,7 @@ const HomeScreen: React.FC = () => {
         </TouchableOpacity>
         <View>
           <Text style={tw`font-bold text-gray-400 text-xs`}>Select body part</Text>
-          <Text style={tw`font-bold text-xl text-pink-500`}>Trek Medic</Text>
+          <Text style={tw`font-bold text-xl text-pink-500`}>Trail Medic</Text>
         </View>
       </View>
       <View style={tw`left-[65%] absolute top-[10%] z-100`}>
