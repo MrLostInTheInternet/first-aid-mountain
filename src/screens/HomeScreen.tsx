@@ -14,15 +14,14 @@ import { StackNavigationProp } from '@react-navigation/stack';
 
 
 const HomeScreen: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
   const [selected, setSelected] = React.useState("");
   
   const data = [
-      {key:'1', value:'Bite Type 1'},
-      {key:'2', value:'Bite Type 2'},
-      {key:'3', value:'Bite Type 3'},
+      {key:'1', value:'Puntura da imenottero'},
+      {key:'2', value:'Morso di vipera'},
+      {key:'3', value:'Cosa mettere nello zaino'},
   ]
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -33,12 +32,11 @@ const HomeScreen: React.FC = () => {
   const handleSelected = () => {
     const biteType = selected
     navigation.navigate("BiteInfo", { biteType })
-    setIsOpen(!isOpen)
   }
 
   return (
     <SafeAreaView>
-      <View style={tw`flex-row top-[10%] absolute pb-3 items-center mx-4`}>
+      <View style={tw`flex-row top-[6%] absolute pb-3 items-center mx-4`}>
         <TouchableOpacity activeOpacity={0.4} >
           <AcademicCapIcon size={40} color="black"/>
         </TouchableOpacity>
@@ -47,17 +45,20 @@ const HomeScreen: React.FC = () => {
           <Text style={tw`font-bold text-xl text-pink-500`}>Trail Medic</Text>
         </View>
       </View>
-      <View style={tw`left-[65%] absolute top-[10%] z-100`}>
+      <View style={tw`right-[2%] absolute top-[6%] z-100`}>
         <SelectList
           setSelected={(val:string) => setSelected(val)}
           onSelect={()=> handleSelected()}
-          placeholder='Bite Type'
           data={data} 
           save="value"
           search={false}
+          inputStyles={{fontSize:12}}
+          boxStyles={{backgroundColor:'white'}}
+          dropdownStyles={{backgroundColor:'white'}}
+          dropdownTextStyles={{fontSize:12, margin: -2}}
         />
       </View>
-      <View style={tw`items-center justify-center top-[8%]`}>
+      <View style={tw`items-center justify-center top-[12%]`}>
         <BodyPartsComponent />
       </View>
     </SafeAreaView>

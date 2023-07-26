@@ -55,20 +55,24 @@ const bodyParts: BodyPart [] = [
 
 const BodyPartInfoScreen: React.FC = () => {
     const route = useRoute<RouteProp<RootStackParamList, 'BodyPartInfo'>>();
+    const [selectBodyPart, setSelectBodyPart] = useState<BodyPart | null>(null);
     const { bodyPartName } = route.params;
-    const selectedPart = '';
-
+    
+    
     const navigation = useNavigation();
-
+    
     useLayoutEffect(() => {
+        const selectedPart = bodyParts.find((part) => part.name.toLowerCase() === bodyPartName.toLowerCase());
+        setSelectBodyPart(selectedPart || null)
         navigation.setOptions({
-        headerTitle: bodyPartName,
+            headerTitle: bodyPartName,
         });
     }, [navigation, bodyPartName]);
 
     return (
         <View>
-            <Text>How to secure</Text>
+            <Text>How to secure {selectBodyPart?.name}</Text>
+            <Text>Description: {selectBodyPart?.description}</Text>
         </View>
     );
 };
