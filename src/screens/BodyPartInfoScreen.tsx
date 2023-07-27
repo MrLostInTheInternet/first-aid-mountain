@@ -36,19 +36,49 @@ const bodyParts: BodyPart [] = [
         imageURL: '../../assets/Sx_shoulder.png'
     },
     {
-        name: 'Elbow',
-        description: 'Quick description about the elbow immobilization',
+        name: 'Left Elbow',
+        description: 'Quick description about the left elbow immobilization',
         imageURL: '../../assets/Elbow.png'
     },
     {
-        name: 'Forearm',
-        description: 'Quick description about the forearm immobilization',
+        name: 'Left Forearm',
+        description: 'Quick description about the left forearm immobilization',
         imageURL: '../../assets/Forearm.png'
     },
     {
-        name: 'Hand',
-        description: 'Quick description about the hand immobilization',
+        name: 'Left Hand',
+        description: 'Quick description about the left hand immobilization',
         imageURL: '../../assets/Hand.png'
+    },
+    {
+        name: 'Right Elbow',
+        description: 'Quick description about the right elbow immobilization',
+        imageURL: '../../assets/Elbow.png'
+    },
+    {
+        name: 'Right Forearm',
+        description: 'Quick description about the right forearm immobilization',
+        imageURL: '../../assets/Forearm.png'
+    },
+    {
+        name: 'Right Hand',
+        description: 'Quick description about the right hand immobilization',
+        imageURL: '../../assets/Hand.png'
+    },
+    {
+        name: 'Right Wrist',
+        description: 'Quick description about the right wrist immobilization',
+        imageURL: '../../assets/Wrist.png'
+    },
+    {
+        name: 'Left Wrist',
+        description: 'Quick description about the left wrist immobilization',
+        imageURL: '../../assets/Wrist.png'
+    },
+    {
+        name: 'Pelvis',
+        description: 'Quick description about the pelvis immobilization',
+        imageURL: '../../assets/Pelvis.png'
     },
 ]
 

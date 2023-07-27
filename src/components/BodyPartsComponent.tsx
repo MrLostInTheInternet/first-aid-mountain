@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React, { useState } from 'react'
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/native';
 import Svg, { Path, G } from "react-native-svg"
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../types';
