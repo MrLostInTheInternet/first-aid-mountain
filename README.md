@@ -1,7 +1,7 @@
 <div align="center">
 <p align="center">
     <h1 align="center">
-        TRAIL MEDIC
+        First Aid Mountain
     </h1>
     <p align="center"></p>
 </p>
@@ -24,8 +24,8 @@
 </div>
 </div>
 
-## What is trailmedic?
-TrailMedic is an IOS/Android app that will come in help of mountain climbers or hikers, for emergencies when the Wi-Fi and/or the Mobile Data are unreachable, in case of fractures or insect's bites, to help to immobilize the involved limb or heal the wound.
+## What is First Aid Mountain?
+First Aid Mountain is an IOS/Android app that will come in help of mountain climbers or hikers, for emergencies when the Wi-Fi and/or the Mobile Data are unreachable, in case of fractures or insect's bites, to help to immobilize the involved limb or heal the wound.
 It is an offline app so you can download it and use it on your phone without the need of Internet Access. Hope this app may not need everytime but in case, here it is and I hope it will help many of you outhere.
 # Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -48,8 +48,8 @@ FIrst of all you need to install the latest [node.js](https://nodejs.org/en/down
 ## ⬇️ Installation <a name="installation"></a>
 Clone the Repository:
 ```bash
-git clone https://github.com/MrLostInTheInternet/trailmedic.git
-cd trailmedic
+git clone https://github.com/MrLostInTheInternet/FAM.git
+cd FAM
 npm install
 ```
 
@@ -63,15 +63,15 @@ And scan the QR code with your phone Expo Go app. That's it. Enjoy it.
 
 # 📄 License <a name="license"></a>
 <a href="https://github.com/MrLostInTheInternet/trekmedic.git/blob/master/LICENSE" target="_blank">
-    Apache-2.0
+    GPLv3
 </a>
 
 # ✍️ Authors <a name="authors"></a>
 - [MrLostInTheInternet](https://github.com/MrLostInTheInternet)
 <p align="center">
 <br>
-<a href="https://github.com/MrLostInTheInternet/trailmedic/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MrLostInTheInternet/trailmedic" />
+<a href="https://github.com/MrLostInTheInternet/First Aid Mountain/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MrLostInTheInternet/FAM" />
 </a>
 
 <p align="center">
