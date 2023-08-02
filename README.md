@@ -62,7 +62,7 @@ And scan the QR code with your phone Expo Go app. That's it. Enjoy it.
 
 
 # 📄 License <a name="license"></a>
-<a href="https://github.com/MrLostInTheInternet/trekmedic.git/blob/master/LICENSE" target="_blank">
+<a href="https://github.com/MrLostInTheInternet/FAM.git/blob/master/LICENSE" target="_blank">
     GPLv3
 </a>
 
