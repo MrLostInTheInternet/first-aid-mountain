@@ -9,7 +9,6 @@ import {
   BarsArrowUpIcon
 } from "react-native-heroicons/outline";
 import { SelectList } from 'react-native-dropdown-select-list'
-import SafeAndroidView from "../components/SafeAndroidView";
 import BodyPartsComponent from "../components/BodyPartsComponent"
 import { StackNavigationProp } from '@react-navigation/stack';
 
@@ -44,7 +43,7 @@ const HomeScreen: React.FC = () => {
         </TouchableOpacity>
         <View>
           <Text style={tw`font-bold text-xs`}>Select body part</Text>
-          <Text style={tw`font-bold text-xl text-pink-500`}>Trail Medic</Text>
+          <Text style={tw`font-bold text-xl text-pink-500`}>First Aid Mountain</Text>
         </View>
       </View>
       <View style={tw`right-[2%] absolute top-[6%] z-100`}>
