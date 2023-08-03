@@ -48,8 +48,8 @@ FIrst of all you need to install the latest [node.js](https://nodejs.org/en/down
 ## ⬇️ Installation <a name="installation"></a>
 Clone the Repository:
 ```bash
-git clone https://github.com/MrLostInTheInternet/FAM.git
-cd FAM
+git clone https://github.com/MrLostInTheInternet/first-aid-mountain.git
+cd first-aid-mountain
 npm install
 ```
 
@@ -62,7 +62,7 @@ And scan the QR code with your phone Expo Go app. That's it. Enjoy it.
 
 
 # 📄 License <a name="license"></a>
-<a href="https://github.com/MrLostInTheInternet/FAM/blob/master/LICENSE" target="_blank">
+<a href="https://github.com/MrLostInTheInternet/first-aid-mountain/blob/master/LICENSE" target="_blank">
     GPLv3
 </a>
 
@@ -72,7 +72,7 @@ And scan the QR code with your phone Expo Go app. That's it. Enjoy it.
 <p align="center">
 <br>
 <a href="https://github.com/MrLostInTheInternet/First Aid Mountain/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MrLostInTheInternet/FAM" />
+  <img src="https://contrib.rocks/image?repo=MrLostInTheInternet/first-aid-mountain" />
 </a>
 
 <p align="center">
