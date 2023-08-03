@@ -68,9 +68,7 @@ And scan the QR code with your phone Expo Go app. That's it. Enjoy it.
 
 # ✍️ Authors <a name="authors"></a>
 - [MrLostInTheInternet](https://github.com/MrLostInTheInternet)
-<br>
--
-[Leucci Serena]
+- [Leucci Serena]
 <p align="center">
 <br>
 <a href="https://github.com/MrLostInTheInternet/First Aid Mountain/graphs/contributors">
