@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState} from 'react';
 import { View, Text } from 'react-native';
 import { useNavigation , useRoute, RouteProp} from '@react-navigation/native';
 import { RootStackParamList } from '../../types';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 interface BodyPart {
     name: string;
@@ -87,7 +88,8 @@ const BodyPartInfoScreen: React.FC = () => {
     const route = useRoute<RouteProp<RootStackParamList, 'BodyPartInfo'>>();
     const [selectBodyPart, setSelectBodyPart] = useState<BodyPart | null>(null);
     const { bodyPartName } = route.params;
-    
+    const xsFontSize = RFValue(12);
+    const lgFontSize = RFValue(14);
     
     const navigation = useNavigation();
     
@@ -101,8 +103,8 @@ const BodyPartInfoScreen: React.FC = () => {
 
     return (
         <View>
-            <Text>How to secure {selectBodyPart?.name}</Text>
-            <Text>Description: {selectBodyPart?.description}</Text>
+            <Text style={{fontSize:lgFontSize}}>How to secure {selectBodyPart?.name}</Text>
+            <Text style={{fontSize:xsFontSize}}>Description: {selectBodyPart?.description}</Text>
         </View>
     );
 };

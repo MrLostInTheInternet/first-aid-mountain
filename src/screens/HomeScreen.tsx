@@ -9,13 +9,15 @@ import {
   BarsArrowUpIcon
 } from "react-native-heroicons/outline";
 import { SelectList } from 'react-native-dropdown-select-list'
+import SafeAndroidView from '../components/SafeAndroidView';
 import BodyPartsComponent from "../components/BodyPartsComponent"
 import { StackNavigationProp } from '@react-navigation/stack';
-
+import { RFValue } from 'react-native-responsive-fontsize';
 
 const HomeScreen: React.FC = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-
+  const xsFontSize = RFValue(10);
+  const lgFontSize = RFValue(14);
   const [selected, setSelected] = React.useState("");
   
   const data = [
@@ -36,31 +38,31 @@ const HomeScreen: React.FC = () => {
   }
 
   return (
-    <SafeAreaView>
-      <View style={tw`flex-row top-[6.55%] absolute pb-3 items-center mx-4`}>
+    <SafeAreaView style={SafeAndroidView.AndroidSafeArea}>
+      <View style={tw`flex-row top-[3%] absolute pb-3 items-center mx-4 pt-4`}>
         <TouchableOpacity activeOpacity={0.4} >
-          <AcademicCapIcon size={40} color="black"/>
+          <AcademicCapIcon size={30} color="black"/>
         </TouchableOpacity>
         <View>
-          <Text style={tw`font-bold text-xs`}>Select body part</Text>
-          <Text style={tw`font-bold text-xl text-pink-500`}>First Aid Mountain</Text>
+          <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'black'}}>Select body part</Text>
+          <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'brown'}}>First Aid Mountain</Text>
         </View>
       </View>
-      <View style={tw`right-[2%] absolute top-[6%] z-100`}>
+      <View style={tw`right-[2%] absolute top-[2%] z-100 pt-4`}>
         <SelectList
           setSelected={(value:string) => setSelected(value)}
           onSelect={()=> handleSelected()}
           data={data} 
           save="value"
-          inputStyles={{fontSize:12}}
+          inputStyles={{fontSize: xsFontSize}}
           boxStyles={{backgroundColor:'white'}}
           dropdownStyles={{backgroundColor:'white'}}
           arrowicon={<BarsArrowDownIcon size={20} color='black' style={tw`mx-1 left-3`}/>}
           closeicon={<BarsArrowUpIcon size={20} color='black' style={tw`mx-1 left-3`}/>}
-          dropdownTextStyles={{fontSize:12, margin: 2}}
+          dropdownTextStyles={{fontSize: xsFontSize, margin: 2}}
         />
       </View>
-      <View style={tw`items-center justify-center top-[12%]`}>
+      <View style={tw`items-center justify-center top-[8%] pt-4`}>
         <BodyPartsComponent />
       </View>
     </SafeAreaView>
