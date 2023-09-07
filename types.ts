@@ -1,5 +1,8 @@
 export type RootStackParamList = {
     Home: undefined;
     BodyPartInfo: { bodyPartName: string }
-    BiteInfo: { biteType: string }
+    Imenottero: undefined;
+    Vipera: undefined;
+    Zaino: undefined;
+    DrawerNavigator: undefined;
 }
