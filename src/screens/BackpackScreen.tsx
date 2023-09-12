@@ -10,6 +10,9 @@ import tw from 'twrnc';
 import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
+import IconMaterial from 'react-native-vector-icons/MaterialIcons';
+import SafeDrawerAndroidView from '../components/SafeDrawerAndroidView';
+
 
 
 const BackpackScreen = () => {
@@ -22,14 +25,14 @@ const BackpackScreen = () => {
   }
 
   return (
-      <SafeAreaView style={SafeAndroidView.AndroidSafeArea}>
-          <View style={tw`flex-row top-[3%] absolute pb-3 items-center mx-4 pt-4`}>
-              <TouchableOpacity activeOpacity={0.4} >
-                  <IconFontAwesome5 name='mountain' size={30} color="#9dbb5c"/>
+      <SafeAreaView style={SafeDrawerAndroidView.AndroidSafeArea}>
+          <View style={tw`flex-row pb-3 items-center mx-4`}>
+              <TouchableOpacity activeOpacity={0} >
+                <IconMaterial name='backpack' size={30} color='#542a18' />
               </TouchableOpacity>
               <View style={tw`flex-1`}>
-                  <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingLeft: 5}}></Text>
-                  <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'brown', paddingLeft: 5}}>First Aid Mountain</Text>
+                <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Mountain First Aid</Text>
+                <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Cosa mettere nello zaino</Text>
               </View>
               <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
               <IconFontAwesome name='bars' size={30} color={'black'} onPress={() => handleDrawer()}/>

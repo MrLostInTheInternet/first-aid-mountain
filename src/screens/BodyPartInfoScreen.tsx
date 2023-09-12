@@ -10,6 +10,9 @@ import tw from 'twrnc';
 import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import SafeDrawerAndroidView from '../components/SafeDrawerAndroidView';
+
 
 
 interface BodyPart {
@@ -98,7 +101,9 @@ const BodyPartInfoScreen: React.FC = () => {
     const { bodyPartName } = route.params;
     const xsFontSize = RFValue(13);
     const lgFontSize = RFValue(17);
-    
+    const xlFontSize = RFValue(20);
+    const xxlFontSize = RFValue(24);
+
     const navigation = useNavigation<DrawerNavigationProp<RootStackParamList>>();
     
     useLayoutEffect(() => {
@@ -111,14 +116,14 @@ const BodyPartInfoScreen: React.FC = () => {
     }
 
     return (
-        <SafeAreaView style={SafeAndroidView.AndroidSafeArea}>
-            <View style={tw`flex-row top-[3%] absolute pb-3 items-center mx-4 pt-4`}>
-                <TouchableOpacity activeOpacity={0.4} >
-                    <IconFontAwesome5 name='mountain' size={30} color="#9dbb5c"/>
+        <SafeAreaView style={SafeDrawerAndroidView.AndroidSafeArea}>
+            <View style={tw`flex-row items-center mx-4`}>
+                <TouchableOpacity activeOpacity={0} >
+                    <Ionicons name='body' size={30} color='#ff0090' />
                 </TouchableOpacity>
                 <View style={tw`flex-1`}>
-                    <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingLeft: 5}}></Text>
-                    <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'brown', paddingLeft: 5}}>First Aid Mountain</Text>
+                    <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Mountain First Aid</Text>
+                    <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>{bodyPartName}</Text>
                 </View>
                 <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
                 <IconFontAwesome name='bars' size={30} color={'black'} onPress={() => handleDrawer()}/>
