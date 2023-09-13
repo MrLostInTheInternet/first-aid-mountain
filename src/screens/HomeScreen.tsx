@@ -28,7 +28,7 @@ const HomeScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={SafeAndroidView.AndroidSafeArea}>
-      <View style={tw`flex-row items-center mx-4 top-[2%]`}>
+      <View style={tw`flex-row items-center mx-4`}>
         <TouchableOpacity activeOpacity={0.4}>
           <LogoNoText/>
         </TouchableOpacity>
@@ -36,8 +36,10 @@ const HomeScreen: React.FC = () => {
           <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingLeft: 5}}>Seleziona zona dolore</Text>
           <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Mountain First Aid</Text>
         </View>
-        <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
-        <IconFontAwesome name='bars' size={30} color={'black'} onPress={() => handleDrawer()}/>
+        <TouchableOpacity activeOpacity={0.4} onPress={() => handleDrawer()} style={tw`flex-row items-center`}>
+          <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
+          <IconFontAwesome name='bars' size={30} color={'black'}/>
+        </TouchableOpacity>
       </View>
       <View style={tw`items-center justify-center mt-2 pt-4`}>
         <BodyPartsComponent />

@@ -7,6 +7,6 @@ export default StyleSheet.create({
   AndroidSafeArea: {
     flex: 1,
     backgroundColor: "white",
-    paddingTop: Platform.OS === "android" ? (statusBar + 9) : 0
+    paddingTop: Platform.OS === "android" ? statusBar : 0
   }
 });

@@ -36,8 +36,10 @@ const ViperaScreen = () => {
                 <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Mountain First Aid</Text>
                 <Text style={{fontSize: lgFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Morso di Vipera</Text>
               </View>
-              <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
-              <IconFontAwesome name='bars' size={30} color={'black'} onPress={() => handleDrawer()}/>
+              <TouchableOpacity activeOpacity={0.4} onPress={() => handleDrawer()} style={tw`flex-row items-center`}>
+                <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
+                <IconFontAwesome name='bars' size={30} color={'black'}/>
+              </TouchableOpacity>
           </View>
       </SafeAreaView>
 );

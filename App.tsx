@@ -13,7 +13,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import SafeAndroidView from './src/components/SafeAndroidView';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { View } from 'react-native';
-
+import { Svg } from 'react-native-svg';
+import Logo from './src/components/logo_loader';
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 
@@ -26,11 +27,11 @@ const App: React.FC = () => {
             return (
               <SafeAreaView>
                 <View style={{
-                  height:100,
+                  height:200,
                   justifyContent: 'center',
-                  backgroundColor: 'pink'
+                  alignItems:'center'
                 }}>
-                  
+                  <Logo />
                 </View>
                 <DrawerItemList {...props}/>
               </SafeAreaView>
@@ -42,7 +43,7 @@ const App: React.FC = () => {
               <Ionicons
                 name='body'
                 size={30}
-                color={focused ? '#eaddca' : 'black'}
+                color={focused ? '#eb1a22' : 'black'}
               />
            ),}}/>
         <Drawer.Screen name="BodyPartInfo" component={BodyPartInfoScreen} options={{drawerLabel: () => null, drawerItemStyle: {display:'none'}}}/>

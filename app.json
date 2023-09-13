@@ -4,10 +4,10 @@
     "slug": "fam",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo_noText.svg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo_text.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo_noText.svg",
         "backgroundColor": "#ffffff"
       },
       "package": "com.mrlostintheinternet.fam"
@@ -28,7 +28,9 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      
+      "eas": {
+        "projectId": "6622c2ab-f168-460a-b2b8-49b9f108b25b"
+      }
     }
   }
 }
