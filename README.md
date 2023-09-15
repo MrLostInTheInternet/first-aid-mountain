@@ -1,7 +1,7 @@
 <div align="center">
 <p align="center">
     <h1 align="center">
-        First Aid Mountain
+        Mountain First Aid
     </h1>
     <p align="center"></p>
 </p>
@@ -24,8 +24,8 @@
 </div>
 </div>
 
-## What is First Aid Mountain?
-First Aid Mountain is an IOS/Android app that will come in help of mountain climbers or hikers, for emergencies when the Wi-Fi and/or the Mobile Data are unreachable, in case of fractures or insect's bites, to help to immobilize the involved limb or heal the wound.
+## What is Mountain First Aid?
+Mountain First Aid is an IOS/Android app that will come in help of mountain climbers or hikers, for emergencies when the Wi-Fi and/or the Mobile Data are unreachable, in case of fractures or insect's bites, to help to immobilize the involved limb or heal the wound.
 It is an offline app so you can download it and use it on your phone without the need of Internet Access. Hope this app may not need everytime but in case, here it is and I hope it will help many of you outhere.
 # Table of Contents
 - [Table of Contents](#table-of-contents)
