@@ -2,12 +2,12 @@
   "expo": {
     "name": "FAM",
     "slug": "fam",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
-    "icon": "./assets/logo_noText.svg",
+    "icon": "./assets/ic_launcher-playstore.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/logo_text.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo_noText.svg",
+        "foregroundImage": "./assets/ic_launcher-playstore.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.mrlostintheinternet.fam"
@@ -29,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "6622c2ab-f168-460a-b2b8-49b9f108b25b"
+        "projectId": "c478f41d-8ed9-461e-ab6e-a11461623a37"
       }
     }
   }

@@ -12,13 +12,16 @@ import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SafeAndroidView from './src/components/SafeAndroidView';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { View } from 'react-native';
+import { Dimensions, View } from 'react-native';
 import { Svg } from 'react-native-svg';
 import Logo from './src/components/logo_loader';
 
 const Drawer = createDrawerNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
+  const fontScaleHeight = Dimensions.get("window").height;
+  const iconSize = fontScaleHeight * 0.037;
+  
   return (
     <NavigationContainer>
       <Drawer.Navigator screenOptions={{drawerPosition: 'right', headerShown:false}}
@@ -27,7 +30,7 @@ const App: React.FC = () => {
             return (
               <SafeAreaView>
                 <View style={{
-                  height:200,
+                  height:'40%',
                   justifyContent: 'center',
                   alignItems:'center'
                 }}>
@@ -42,29 +45,29 @@ const App: React.FC = () => {
         <Drawer.Screen name="Home" component={HomeScreen} options={{drawerIcon: ({focused}) => (
               <Ionicons
                 name='body'
-                size={30}
+                size={iconSize}
                 color={focused ? '#eb1a22' : 'black'}
               />
            ),}}/>
         <Drawer.Screen name="BodyPartInfo" component={BodyPartInfoScreen} options={{drawerLabel: () => null, drawerItemStyle: {display:'none'}}}/>
-        <Drawer.Screen name="Imenottero" component={ImenotteroScreen} options={{drawerLabel:'Morso da Imenottero', drawerIcon: ({focused}) => (
+        <Drawer.Screen name="Imenottero" component={ImenotteroScreen} options={{drawerLabel:'Puntura da Imenottero', drawerIcon: ({focused}) => (
               <IconCommunity
                 name='bee'
-                size={30}
+                size={iconSize}
                 color={focused ? '#ffa500' : 'black'}
               />
            ),}}/>
         <Drawer.Screen name="Vipera" component={ViperaScreen} options={{drawerLabel:'Morso di Vipera', drawerIcon: ({focused}) => (
               <IconCommunity
                 name='snake'
-                size={30}
+                size={iconSize}
                 color={focused ? '#9bbd5c' : 'black'}
               />
            ),}}/>
         <Drawer.Screen name="Zaino" component={ZainoScreen} options={{drawerLabel:'Cosa mettere nello zaino', drawerIcon: ({focused}) => (
               <IconMaterial
                 name='backpack'
-                size={30}
+                size={iconSize}
                 color={focused ? '#542a18' : 'black'}
               />
            ),}}/>

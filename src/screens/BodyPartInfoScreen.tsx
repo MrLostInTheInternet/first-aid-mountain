@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useState} from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, useWindowDimensions, Dimensions } from 'react-native';
 import { useNavigation , useRoute, RouteProp} from '@react-navigation/native';
 import { RootStackParamList } from '../../types';
 import { RFValue } from 'react-native-responsive-fontsize';
@@ -99,10 +99,14 @@ const BodyPartInfoScreen: React.FC = () => {
     const route = useRoute<RouteProp<RootStackParamList, 'BodyPartInfo'>>();
     const [selectBodyPart, setSelectBodyPart] = useState<BodyPart | null>(null);
     const { bodyPartName } = route.params;
-    const xsFontSize = RFValue(13);
-    const lgFontSize = RFValue(17);
-    const xlFontSize = RFValue(20);
-    const xxlFontSize = RFValue(24);
+    const fontScaleHeight = Dimensions.get("window").height
+    const fontScaleWidth = Dimensions.get("window").width
+  
+    const xsFontSize = fontScaleHeight * 0.02;
+    const lgFontSize = fontScaleHeight * 0.022;
+    const xlFontSize = fontScaleHeight * 0.024;
+    const xxlFontSize = fontScaleHeight * 0.027;
+    const iconSize = fontScaleHeight * 0.037;
 
     const navigation = useNavigation<DrawerNavigationProp<RootStackParamList>>();
     
@@ -119,7 +123,7 @@ const BodyPartInfoScreen: React.FC = () => {
         <SafeAreaView style={SafeDrawerAndroidView.AndroidSafeArea}>
             <View style={tw`flex-row items-center mx-4`}>
                 <TouchableOpacity activeOpacity={0} >
-                    <Ionicons name='body' size={30} color='#ff0090' />
+                    <Ionicons name='body' size={iconSize} color='#ff0090' />
                 </TouchableOpacity>
                 <View style={tw`flex-1`}>
                     <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'#eb1a22', paddingLeft: 5}}>Mountain First Aid</Text>
@@ -127,7 +131,7 @@ const BodyPartInfoScreen: React.FC = () => {
                 </View>
                 <TouchableOpacity activeOpacity={0.4} onPress={() => handleDrawer()} style={tw`flex-row items-center`}>
                     <Text style={{fontSize: xsFontSize, fontWeight:'bold', color:'gray', paddingRight: 5}}>Apri opzioni</Text>
-                    <IconFontAwesome name='bars' size={30} color={'black'}/>
+                    <IconFontAwesome name='bars' size={iconSize} color={'black'}/>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
