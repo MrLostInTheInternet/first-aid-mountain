@@ -4,8 +4,8 @@ import Svg, { G, Path, Ellipse } from "react-native-svg"
 function SnakeBiteVenoumous(props:any) {
   return (
     <Svg
-      width='50%'
-      height='90%'
+      width='30%'
+      height='50%'
       viewBox="0 0 105 190"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
