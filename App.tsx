@@ -4,9 +4,9 @@ import BodyPartInfoScreen from './src/screens/BodyPartInfoScreen';
 import { RootStackParamList } from './types';
 import 'react-native-gesture-handler';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
-import ImenotteroScreen from './src/screens/AntScreen';
-import ViperaScreen from './src/screens/SnakeScreen';
-import ZainoScreen from './src/screens/BackpackScreen';
+import AntScreen from './src/screens/AntScreen';
+import SnakeScreen from './src/screens/SnakeScreen';
+import BackpackScreen from './src/screens/BackpackScreen';
 import IconCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -50,21 +50,21 @@ const App: React.FC = () => {
               />
            ),}}/>
         <Drawer.Screen name="BodyPartInfo" component={BodyPartInfoScreen} options={{drawerLabel: () => null, drawerItemStyle: {display:'none'}}}/>
-        <Drawer.Screen name="Imenottero" component={ImenotteroScreen} options={{drawerLabel:'Puntura da Imenottero', drawerIcon: ({focused}) => (
+        <Drawer.Screen name="Ant" component={AntScreen} options={{drawerLabel:'Puntura da Imenottero', drawerIcon: ({focused}) => (
               <IconCommunity
                 name='bee'
                 size={iconSize}
                 color={focused ? '#ffa500' : 'black'}
               />
            ),}}/>
-        <Drawer.Screen name="Vipera" component={ViperaScreen} options={{drawerLabel:'Morso di Vipera', drawerIcon: ({focused}) => (
+        <Drawer.Screen name="Snake" component={SnakeScreen} options={{drawerLabel:'Morso di Vipera', drawerIcon: ({focused}) => (
               <IconCommunity
                 name='snake'
                 size={iconSize}
                 color={focused ? '#9bbd5c' : 'black'}
               />
            ),}}/>
-        <Drawer.Screen name="Zaino" component={ZainoScreen} options={{drawerLabel:'Cosa mettere nello zaino', drawerIcon: ({focused}) => (
+        <Drawer.Screen name="Backpack" component={BackpackScreen} options={{drawerLabel:'Kit primo soccorso', drawerIcon: ({focused}) => (
               <IconMaterial
                 name='backpack'
                 size={iconSize}
