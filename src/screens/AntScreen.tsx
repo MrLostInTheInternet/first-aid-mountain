@@ -2,20 +2,18 @@ import React, { useEffect, useLayoutEffect, useState} from 'react';
 import { View, Text, Button, Linking, useWindowDimensions, Dimensions } from 'react-native';
 import { useNavigation , useRoute, RouteProp} from '@react-navigation/native';
 import { RootStackParamList } from '../../types';
-import { RFValue } from 'react-native-responsive-fontsize';
 import SafeAndroidView from '../components/SafeAndroidView';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import tw from 'twrnc';
 import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
-import { DrawerNavigationProp } from '@react-navigation/drawer';
 import IconCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
-import { Circle } from 'react-native-svg';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 import SafeDrawerAndroidView from '../components/SafeDrawerAndroidView';
 
 
-const ImenotteroScreen = () => {
+const AntScreen = () => {
     const navigation = useNavigation<DrawerNavigationProp<RootStackParamList>>();
     const [initialMessage, setInitialMessage] = useState(true);
     const [allergicYes, setAllergicYes] = useState(false);
@@ -102,11 +100,11 @@ const ImenotteroScreen = () => {
           </View>
           {initialMessage && !allergicYes && !allergicIdk && !allergicNot && ( // INITIAL PAGE
             <View style={tw`items-center mx-4 flex-1 justify-center flex`}>
-                <View style={tw`bg-red-500 justify-center items-center mx-[10%] rounded-3xl shadow-2xl p-4 mx-5`}>
+                <View style={tw`bg-red-500 w-[90%] justify-center items-center mx-[10%] rounded-3xl shadow-2xl p-4 mx-5`}>
                     <Text allowFontScaling={false} style={{fontSize: xxlFontSize, fontWeight:'bold', color:'white', textAlign:'center'}}>Sei stata/o punta/o da una Vespa o simile?</Text>
                 </View>
                 <IconCommunity name='arrow-down-thin' size={iconSize} style={tw`m-2`}/>
-                <View style={tw`bg-red-500 h-[15%] justify-center items-center mx-[10%] p-4 rounded-3xl shadow-2xl mb-7`}>
+                <View style={tw`bg-red-500 h-[15%] w-[90%] justify-center items-center mx-[10%] p-4 rounded-3xl shadow-2xl mb-7`}>
                     <Text allowFontScaling={false} style={{fontSize: xxlFontSize, fontWeight:'bold', color:'white', textAlign:'center'}}>Sei allergico?</Text>
                 </View>
                 
@@ -124,13 +122,13 @@ const ImenotteroScreen = () => {
             </View>)}
           {allergicYes && !allergicIdk && !allergicNot && ( // ALLERGIC YES PAGE ALERT
             <View style={tw`items-center justify-center flex-1`}>
-                <View style={tw`bg-red-500 p-4 justify-center rounded-3xl shadow-2xl mx-[10%]`}>
+                <View style={tw`bg-red-500 w-[90%] p-4 justify-center rounded-3xl shadow-2xl mx-[10%]`}>
                     <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'white'}}>SOMMINISTRA FARMACI EMERGENZA COME DA INDICAZIONE DEL TUO MEDICO</Text>
                     <View style={tw`bg-white rounded-2xl p-4 mt-2`}>
                         <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'red'}}>[ ADRENALINA INTRAMUSCOLO COSCIA ]</Text>
                     </View>
                 </View>
-                <View style={tw`mt-5 flex-row items-center justify-center`}>
+                <View style={tw`mt-5 flex-row w-[90%] items-center justify-center`}>
                     <TouchableOpacity activeOpacity={0} style={tw`bg-red-500 flex-row p-4 justify-center rounded-3xl items-center shadow-2xl mx-[4%]`} onPress={() => openPhoneDialer()}>
                         <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'white', marginHorizontal:'5%'}}>ALLERTA 118 O 112</Text>
                         <IconCommunity name='phone-dial' size={iconSize}/>
@@ -140,11 +138,11 @@ const ImenotteroScreen = () => {
             </View>)}
           {!allergicYes && !allergicIdk && allergicNot && ( // ALLERGIC NOT PAGE
             <View style={tw`items-center flex-1 justify-center`}>
-                <View style={tw`bg-yellow-300 p-2 rounded-xl shadow-2xl mx-[10%]`}>
+                <View style={tw`bg-yellow-300 w-[90%] p-2 rounded-xl shadow-2xl mx-[10%]`}>
                     <Text allowFontScaling={false} style={{fontSize: xsFontSize, fontWeight:'bold', color:'black', textAlign:'center'}}>COMPARSA DI ROSSORE, GONFIORE 2-3 CM</Text>
                 </View>
                 <IconCommunity name='arrow-down-thin' size={iconSize} style={tw``}/>
-                <View style={tw`bg-green-500 p-2 justify-center rounded-3xl shadow-2xl mx-[10%]`}>
+                <View style={tw`bg-green-500 w-[90%] p-2 justify-center rounded-3xl shadow-2xl mx-[10%]`}>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• APPLICARE GHIACCIO SECCO</Text>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• APPLICARE POMATA AL CORTISONE</Text>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white'}}>• ESTRARRE IL PUNGIGLIONE SE PRESENTE</Text>
@@ -153,22 +151,22 @@ const ImenotteroScreen = () => {
             </View>)}
             {!allergicYes && allergicIdk && !allergicNot && ( // ALLERGIC I DONT KNOW PAGE
             <View style={tw`items-center flex-1 justify-center`}>
-                <View style={tw`bg-yellow-300 p-2 rounded-xl shadow-2xl mx-[1%]`}>
+                <View style={tw`bg-yellow-300 w-[90%] p-2 rounded-xl shadow-2xl mx-[1%]`}>
                     <Text allowFontScaling={false} style={{fontSize: xsFontSize, fontWeight:'bold', color:'black', textAlign:'center'}}>COMPARSA DI ROSSORE, GONFIORE 2-3 CM</Text>
                 </View>
                 <IconCommunity name='arrow-down-thin' size={iconSize} style={tw``}/>
-                <View style={tw`bg-green-500 p-2 justify-center rounded-3xl shadow-2xl mx-[1%]`}>
+                <View style={tw`bg-green-500 w-[90%] p-2 justify-center rounded-3xl shadow-2xl mx-[1%]`}>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• APPLICARE GHIACCIO SECCO</Text>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• APPLICARE POMATA AL CORTISONE</Text>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white'}}>• ESTRARRE IL PUNGIGLIONE SE PRESENTE</Text>
                     <Text allowFontScaling={false} style={[{fontSize: lgFontSize, fontWeight:'bold', color:'red', textAlign:'center', backgroundColor:'white', padding:5}, tw`rounded-2xl`]}>Utilizza pinzette o oggetti simili, il pungiglione va sollevato [ ! ]</Text>
                 </View>
                 <IconCommunity name='arrow-down-thin' size={iconSize} style={tw``}/>
-                <View style={tw`bg-yellow-300 p-2 rounded-xl shadow-2xl mx-[1%]`}>
+                <View style={tw`bg-yellow-300 w-[90%] p-2 rounded-xl shadow-2xl mx-[1%]`}>
                     <Text allowFontScaling={false} style={{fontSize: xsFontSize, fontWeight:'bold', color:'black', textAlign:'center'}}>COMPARSA DI</Text>
                 </View>
                 <IconCommunity name='arrow-down-thin' size={iconSize} style={tw``}/>
-                <View style={tw`bg-yellow-500 p-2 justify-center rounded-3xl shadow-2xl mx-[1%]`}>
+                <View style={tw`bg-yellow-500 w-[90%] p-2 justify-center rounded-3xl shadow-2xl mx-[1%]`}>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• DIFFICOLTA' RESPIRATORIA</Text>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• GONFIORE BOCCA, COLLO, LINGUA</Text>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5}}>• ABBASSAMENTO PRESSIONE</Text>
@@ -182,20 +180,20 @@ const ImenotteroScreen = () => {
                         <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'white', textAlign:'center', marginHorizontal: 20}}>No</Text>
                     </TouchableOpacity>
                 </View>
-                {allergicIdkNot && (<View style={tw`bg-green-500 p-2 justify-center rounded-xl shadow-2xl mt-4`}>
+                {allergicIdkNot && (<View style={tw`bg-green-500 w-[90%] p-2 justify-center rounded-xl shadow-2xl mt-4`}>
                     <Text allowFontScaling={false} style={{fontSize: lgFontSize, fontWeight:'bold', color:'white', marginBottom:5, textAlign:'center'}}>• RESTA MONITORATO PER 24/48 H</Text>
                 </View>)}
             </View>)}
             {allergicIdkYes && ( // ALLERGIC IDK YES PAGE ALERT
             <View style={tw`items-center justify-center flex-1`}>
-                <View style={tw`flex-row justify-center items-center`}>
+                <View style={tw`flex-row w-[90%] justify-center items-center`}>
                     <TouchableOpacity activeOpacity={0} style={tw`bg-red-500 flex-row p-4 justify-center rounded-3xl items-center shadow-2xl mx-[4%]`} onPress={() => openPhoneDialer()}>
                         <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'white', marginHorizontal:'5%'}}>ALLERTA 118 O 112</Text>
                         <IconCommunity name='phone-dial' size={iconSize}/>
                         <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', marginHorizontal:'2%'}}>Chiama</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={tw`bg-red-500 p-4 justify-center rounded-3xl shadow-2xl mt-5 mx-[10%]`}>
+                <View style={tw`bg-red-500 w-[90%] p-4 justify-center rounded-3xl shadow-2xl mt-5 mx-[10%]`}>
                     <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'white'}}>SOMMINISTRA FARMACI EMERGENZA COME DA INDICAZIONE DEL TUO MEDICO</Text>
                     <View style={tw`bg-white rounded-2xl p-4 mt-3`}>
                         <Text allowFontScaling={false} style={{fontSize: xlFontSize, fontWeight:'bold', color:'red'}}>[ ADRENALINA INTRAMUSCOLO COSCIA ]</Text>
@@ -206,4 +204,4 @@ const ImenotteroScreen = () => {
 );
 }
 
-export default ImenotteroScreen
+export default AntScreen

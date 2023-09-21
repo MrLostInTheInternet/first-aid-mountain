@@ -6,5 +6,8 @@ export type RootStackParamList = {
     Ant: undefined;
     Snake: undefined;
     Backpack: undefined;
-    DrawerNavigator: undefined;
+    Settings: undefined;
+    Help: undefined;
+    RateUs: undefined;
+    Info: undefined;
 }

@@ -18,7 +18,7 @@ import BondageSnakeBite from '../components/BondageSnakeBite';
 
 
 
-const ViperaScreen = () => {
+const SnakeScreen = () => {
   const navigation = useNavigation<DrawerNavigationProp<RootStackParamList>>();
   const fontScaleHeight = Dimensions.get("window").height
   const fontScaleWidth = Dimensions.get("window").width
@@ -139,4 +139,4 @@ const ViperaScreen = () => {
 );
 }
 
-export default ViperaScreen
+export default SnakeScreen
