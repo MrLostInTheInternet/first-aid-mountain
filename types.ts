@@ -10,4 +10,5 @@ export type RootStackParamList = {
     Help: undefined;
     RateUs: undefined;
     Info: undefined;
+    BodyList: undefined;
 }

@@ -1,9 +1,9 @@
 import React, { useLayoutEffect, useState} from 'react';
 import { View, Text, useWindowDimensions, Dimensions } from 'react-native';
 import { useNavigation , useRoute, RouteProp} from '@react-navigation/native';
-import { RootStackParamList } from '../../types';
+import { RootStackParamList } from '../../../types';
 import { RFValue } from 'react-native-responsive-fontsize';
-import SafeAndroidView from '../components/SafeAndroidView';
+import SafeAndroidView from '../../components/SafeAndroidView';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import tw from 'twrnc';
@@ -11,7 +11,7 @@ import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SafeDrawerAndroidView from '../components/SafeDrawerAndroidView';
+import SafeDrawerAndroidView from '../../components/SafeDrawerAndroidView';
 
 
 

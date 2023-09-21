@@ -1,8 +1,8 @@
 import React, { useEffect, useLayoutEffect, useState} from 'react';
 import { View, Text, Button, Linking, useWindowDimensions, Dimensions } from 'react-native';
 import { useNavigation , useRoute, RouteProp} from '@react-navigation/native';
-import { RootStackParamList } from '../../types';
-import SafeAndroidView from '../components/SafeAndroidView';
+import { RootStackParamList } from '../../../types';
+import SafeAndroidView from '../../components/SafeAndroidView';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import tw from 'twrnc';
@@ -10,7 +10,7 @@ import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
 import IconCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
-import SafeDrawerAndroidView from '../components/SafeDrawerAndroidView';
+import SafeDrawerAndroidView from '../../components/SafeDrawerAndroidView';
 
 
 const AntScreen = () => {

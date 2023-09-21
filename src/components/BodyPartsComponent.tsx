@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-import Svg, { Path, G } from "react-native-svg"
+import Svg, { Path, G, TSpan } from "react-native-svg"
 import { RootStackParamList } from '../../types';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 

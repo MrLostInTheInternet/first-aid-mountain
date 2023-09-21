@@ -22,6 +22,7 @@
     "json5": ">=1.0.2",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-app-intro-slider": "^4.0.4",
     "react-native-dropdown": "^0.0.6",
     "react-native-dropdown-picker": "^5.4.6",
     "react-native-dropdown-select-list": "^2.0.4",

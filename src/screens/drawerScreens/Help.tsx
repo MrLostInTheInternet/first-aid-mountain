@@ -2,7 +2,7 @@ import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import SafeDrawerAndroidView from '../components/SafeDrawerAndroidView'
+import SafeDrawerAndroidView from '../../components/SafeDrawerAndroidView'
 import tw from 'twrnc'
 import IconFontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import IconFontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -10,7 +10,7 @@ import IconCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native'
 import { DrawerNavigationProp } from '@react-navigation/drawer'
-import { RootStackParamList } from '../../types'
+import { RootStackParamList } from '../../../types'
 
 
 const fontScaleHeight = Dimensions.get("window").height  

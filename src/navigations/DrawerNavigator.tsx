@@ -5,17 +5,17 @@ import { RootStackParamList } from '../../types'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Logo from '../components/logo_loader';
 import HomeScreen from '../screens/HomeScreen';
-import AntScreen from '../../src/screens/AntScreen';
-import SnakeScreen from '../../src/screens/SnakeScreen';
-import BackpackScreen from '../../src/screens/BackpackScreen';
-import BodyPartInfoScreen from '../screens/BodyPartInfoScreen';
+import AntScreen from '../screens/drawerScreens/AntScreen';
+import SnakeScreen from '../../src/screens/drawerScreens/SnakeScreen';
+import BackpackScreen from '../../src/screens/drawerScreens/BackpackScreen';
+import BodyPartInfoScreen from '../screens/drawerScreens/BodyPartInfoScreen';
 import BottomTabsNavigator from './BottomTabsNavigator';
 import IconCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconMaterial from 'react-native-vector-icons/MaterialIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SettingsScreen from '../screens/Settings';
-import Help from '../screens/Help';
-import RateUs from '../screens/RateUs';
+import SettingsScreen from '../screens/drawerScreens/Settings';
+import Help from '../screens/drawerScreens/Help';
+import RateUs from '../screens/drawerScreens/RateUs';
 
 
 
