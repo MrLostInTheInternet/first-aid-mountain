@@ -27,6 +27,15 @@
 ## What is Mountain First Aid?
 Mountain First Aid is an IOS/Android app that will come in help of mountain climbers or hikers, for emergencies when the Wi-Fi and/or the Mobile Data are unreachable, in case of fractures or insect's bites, to help to immobilize the involved limb or heal the wound.
 It is an offline app so you can download it and use it on your phone without the need of Internet Access. Hope this app may not need everytime but in case, here it is and I hope it will help many of you outhere.
+
+<div align="center">
+    <p>
+        <img src="./assets/homepage.jpg" width="20%" title="Home"/>
+        <img src="./assets/selectPart.jpg" width="20%" title="Select Part"/>    
+        <img src="./assets/drawer.jpg" width="20%" title="Drawer"/>    
+    </p>
+</div>
+
 # Table of Contents
 - [Table of Contents](#table-of-contents)
 - [🏁 Getting Started ](#getting-started)
